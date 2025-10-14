@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\adminlte.css" />
+    <Content Remove="wwwroot\css\adminlte.css.map" />
+    <Content Remove="wwwroot\css\adminlte.min.css" />
+    <Content Remove="wwwroot\css\adminlte.min.css.map" />
+    <Content Remove="wwwroot\css\adminlte.rtl.css" />
+    <Content Remove="wwwroot\css\adminlte.rtl.css.map" />
+    <Content Remove="wwwroot\css\adminlte.rtl.min.css" />
+    <Content Remove="wwwroot\css\adminlte.rtl.min.css.map" />
+    <Content Remove="wwwroot\js\adminlte.js" />
+    <Content Remove="wwwroot\js\adminlte.js.map" />
+    <Content Remove="wwwroot\js\adminlte.min.js" />
+    <Content Remove="wwwroot\js\adminlte.min.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\codeql\codeql-config.yml" />
     <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\CONTRIBUTING.md" />
     <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\dependabot.yml" />
@@ -19,6 +34,18 @@
     <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\workflows\lint.yml" />
     <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\workflows\node-sass.yml" />
     <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\workflows\release.yml" />
+    <None Include="wwwroot\css\adminlte.css" />
+    <None Include="wwwroot\css\adminlte.css.map" />
+    <None Include="wwwroot\css\adminlte.min.css" />
+    <None Include="wwwroot\css\adminlte.min.css.map" />
+    <None Include="wwwroot\css\adminlte.rtl.css" />
+    <None Include="wwwroot\css\adminlte.rtl.css.map" />
+    <None Include="wwwroot\css\adminlte.rtl.min.css" />
+    <None Include="wwwroot\css\adminlte.rtl.min.css.map" />
+    <None Include="wwwroot\js\adminlte.js" />
+    <None Include="wwwroot\js\adminlte.js.map" />
+    <None Include="wwwroot\js\adminlte.min.js" />
+    <None Include="wwwroot\js\adminlte.min.js.map" />
   </ItemGroup>
 
 </Project>
