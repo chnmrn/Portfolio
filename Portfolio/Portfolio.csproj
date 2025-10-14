@@ -6,4 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\codeql\codeql-config.yml" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\CONTRIBUTING.md" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\dependabot.yml" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\FUNDING.yml" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\ISSUE_TEMPLATE\bug-report-for-adminlte-v3.1-x.md" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\ISSUE_TEMPLATE\feature-request-for-adminlte-v4-x.md" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\workflows\bundlewatch.yml" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\workflows\codeql.yml" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\workflows\docs.yml" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\workflows\lint.yml" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\workflows\node-sass.yml" />
+    <None Include="Views\Template\AdminLTE-4.0.0-rc4\AdminLTE-4.0.0-rc4\.github\workflows\release.yml" />
+  </ItemGroup>
+
 </Project>
