@@ -1,0 +1,193 @@
+﻿/* MOST OF THIS CODE IS COMING FROM ADMINTLE TEMPLATE, THIS IS JUST A MODIFICATION TO GIVE THAT CYBERSPACE STYLE */
+:root {
+    --bs-body-bg: #0b0c1a;
+    --bs-body-color: #c0e0ff; 
+    --bs-primary: #33aaff; 
+    --bs-secondary: #6622cc;
+    --bs-info: #00ffff;
+    --bs-border-color: #1a1d40; 
+    --bs-light: #1b1b2f; 
+    --bs-dark: #000814;
+    --bs-body-bg-rgb: 12, 19, 50; 
+    --bs-secondary-color: 0, 255, 255;
+    --bs-nav-link-color: #7c00ff;
+}
+
+[data-bs-theme=light],
+[data-bs-theme=dark] {
+    --bs-body-bg: #0b0c1a;
+    --bs-body-color: #c0e0ff;
+    --bs-primary: #33aaff;
+    --bs-border-color: #1a1d40;
+}
+
+
+body, footer{
+    color: #00ffff;
+    font-family: 'Share Tech Mono', monospace;
+    height: 100%;
+    background: linear-gradient(180deg, rgb(10, 15, 40) 0%, rgb(13, 23, 59) 60%, rgb(5, 10, 25) 100%);
+}
+
+.content-wrapper, .main-footer, .main-header {
+    background-color: rgba(13, 23, 59, 0.85);
+    backdrop-filter: blur(6px);
+}
+
+.app-wrapper {
+    display: block !important;
+}
+
+/* HAD TO DO MODIFICATIONS ON THE CONTENT CUZ I DELETED THE SIDEBAR */
+.app-wrapper > .container {
+    max-width: 100%;
+    grid-area: unset !important;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+
+/* DARK MODE COMING FROM ADMINTLE */
+[data-bs-theme="dark"].app-sidebar,
+[data-bs-theme="dark"] .app-sidebar {
+    --lte-sidebar-hover-bg: rgba(51, 170, 255, 0.1); 
+    --lte-sidebar-color: #99cfff; 
+    --lte-sidebar-hover-color: #c0e0ff;
+    --lte-sidebar-active-color: #00ffff; 
+    --lte-sidebar-menu-active-bg: rgba(51, 170, 255, 0.15); 
+    --lte-sidebar-menu-active-color: #00ffff;
+    --lte-sidebar-submenu-bg: transparent; 
+    --lte-sidebar-submenu-color: #99cfff;
+    --lte-sidebar-submenu-hover-color: #c0e0ff;
+    --lte-sidebar-submenu-hover-bg: rgba(51, 170, 255, 0.1); 
+    --lte-sidebar-submenu-active-color: #00ffff; 
+    --lte-sidebar-submenu-active-bg: rgba(51, 170, 255, 0.15);
+    --lte-sidebar-header-color: #66c2ff;
+}
+
+.app-sidebar {
+    --lte-sidebar-hover-bg: rgba(51, 170, 255, 0.1); 
+    --lte-sidebar-color: #99cfff; 
+    --lte-sidebar-hover-color: #c0e0ff; 
+    --lte-sidebar-active-color: #00ffff;
+    --lte-sidebar-menu-active-bg: rgba(51, 170, 255, 0.15); 
+    --lte-sidebar-menu-active-color: #00ffff;
+    --lte-sidebar-submenu-bg: transparent; 
+    --lte-sidebar-submenu-color: #99cfff;
+    --lte-sidebar-submenu-hover-color: #c0e0ff; 
+    --lte-sidebar-submenu-hover-bg: rgba(51, 170, 255, 0.1); 
+    --lte-sidebar-submenu-active-color: #00ffff;
+    --lte-sidebar-submenu-active-bg: rgba(51, 170, 255, 0.15); 
+    --lte-sidebar-header-color: #66c2ff; 
+}
+
+.nav-link {
+    color: #7c00ff !important; 
+    font-family: "Goldman", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #a266ff !important;
+
+}
+
+.display-4 {
+    font-weight: 200;
+    line-height: 1.5;
+    font-size: calc(1.475rem + 2.7vw);
+}
+
+@media (min-width: 1200px) {
+    .display-4 {
+        font-size: 5rem;
+    }
+}
+
+
+h1 {
+    color: #8d00ff;
+    font-family: "Rubik Glitch", system-ui;
+    font-style: normal;
+    text-shadow: 0 0 3px #8d00ff, 0 0 3px #8d00ff;
+    font-size: 5rem;
+}
+
+/* ====================== THIS IS THE STYLE FOR THE INTERACTIVE NODES ====================== */
+
+.node {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #2f347a;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px #ffffff;
+    transition: 0.3s;
+}
+
+.node:hover {
+    box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff;
+    transform: scale(1.2);
+}
+
+#cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2f347a;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid #0ff;
+    color: #0ff;
+    padding: 20px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    max-width: 80%;
+    text-align: center;
+}
+
+.modal.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid #0ff;
+    pointer-events: none;
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+
+    20%, 22%, 24%, 55% {
+        opacity: 0.3;
+    }
+}
+
+
