@@ -1,32 +1,32 @@
 ﻿/* MOST OF THIS CODE IS COMING FROM ADMINTLE TEMPLATE, THIS IS JUST A MODIFICATION TO GIVE THAT CYBERSPACE STYLE */
 :root {
-    --bs-body-bg: #0b0c1a;
-    --bs-body-color: #c0e0ff; 
-    --bs-primary: #33aaff; 
+    --bs-body-bg: #101029;
+    --bs-body-color: #c0e0ff;
+    --bs-primary: #33aaff;
     --bs-secondary: #6622cc;
     --bs-info: #00ffff;
-    --bs-border-color: #1a1d40; 
-    --bs-light: #1b1b2f; 
+    --bs-border-color: #1a1d40;
+    --bs-light: #1b1b2f;
     --bs-dark: #000814;
-    --bs-body-bg-rgb: 12, 19, 50; 
+    --bs-body-bg-rgb: 12, 19, 50;
     --bs-secondary-color: 0, 255, 255;
     --bs-nav-link-color: #7c00ff;
 }
 
 [data-bs-theme=light],
 [data-bs-theme=dark] {
-    --bs-body-bg: #0b0c1a;
+    --bs-body-bg: #101029;
     --bs-body-color: #c0e0ff;
     --bs-primary: #33aaff;
     --bs-border-color: #1a1d40;
 }
 
 
-body, footer{
-    color: #00ffff;
+body, footer {
+    color: #7c00ff;
     font-family: 'Share Tech Mono', monospace;
     height: 100%;
-    background: linear-gradient(180deg, rgb(10, 15, 40) 0%, rgb(13, 23, 59) 60%, rgb(5, 10, 25) 100%);
+    background: linear-gradient(180deg, rgb(0, 3, 20) 0%, rgb(13, 23, 59) 60%, rgb(0, 3, 20) 100%);
 }
 
 .content-wrapper, .main-footer, .main-header {
@@ -41,10 +41,11 @@ body, footer{
 /* HAD TO DO MODIFICATIONS ON THE CONTENT CUZ I DELETED THE SIDEBAR */
 .app-wrapper > .container {
     max-width: 100%;
-    grid-area: unset !important;
     width: 100%;
     margin-left: 0;
+    margin-right: 0;
     padding-left: 0;
+    padding-right: 0;
 }
 
 
@@ -115,19 +116,20 @@ h1 {
     font-style: normal;
     text-shadow: 0 0 3px #8d00ff, 0 0 3px #8d00ff;
     font-size: 5rem;
+    margin-top: 50px;
 }
 
 /* ====================== THIS IS THE STYLE FOR THE INTERACTIVE NODES ====================== */
 
 .node {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background: #2f347a;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 5px #ffffff;
     transition: 0.3s;
+    background-color: #2f347a; 
 }
 
 .node:hover {
@@ -189,5 +191,265 @@ h1 {
         opacity: 0.3;
     }
 }
+
+
+/* ====================== THIS IS THE STYLE FOR THE INDEX ====================== */
+.cyber-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.cyber-panel {
+    background: rgba(15, 20, 40, 0.7);
+    border: 1px solid #2f347a;
+    border-radius: 12px;
+    padding: 30px 40px;
+    max-width: 800px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px #755bb3;
+    animation: pulse-glow 3s infinite alternate;
+}
+
+.cyber-panel h1 {
+    color: #8d00ff;
+    text-shadow: 0 0 10px #8d00ff;
+    margin-bottom: 20px;
+}
+
+.cyber-panel p {
+   color: #c0e0ff;
+   font-size: 1.1rem;
+   line-height: 1.8;
+}
+
+.cyber-panel a {
+    color: #755bb3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cyber-panel a:hover {
+    text-shadow: 0 0 8px #755bb3;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 15px #755bb3;
+    }
+
+    100% {
+        box-shadow: 0 0 25px #755bb3;
+    }
+}
+
+.panel-header {
+    text-align: left;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 0.9rem;
+    color: #8d00ff;
+    border-bottom: 1px solid #8d00ff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #8d00ff;
+}
+
+/* ====================== ABOUT ME LAYOUT ====================== */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 80px 0;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+.about-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    color: var(--bs-body-color);
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1.6;
+}
+
+.about-text h2 {
+    color: #8d00ff;
+    text-shadow: 0 0 8px #8d00ff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.about-text.full {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-img {
+    flex: 1;
+    text-align: center;
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    filter: brightness(0.8) contrast(1.2);
+    box-shadow: 0 0 20px rgba(141, 0, 255, 0.4);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.05);
+    filter: brightness(1) contrast(1.4);
+}
+
+
+.highlight {
+    color: #00ffff;
+    text-shadow: 0 0 6px #00ffff;
+    font-weight: bold;
+}
+
+
+.cyber-link {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 25px;
+    border: 1px solid #8d00ff;
+    border-radius: 6px;
+    color: #8d00ff;
+    text-decoration: none;
+    font-family: 'Share Tech Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+.cyber-link:hover {
+    background-color: rgba(141, 0, 255, 0.15);
+    box-shadow: 0 0 15px #8d00ff;
+}
+
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column !important;
+    }
+
+    .about-text, .about-img {
+        flex: unset;
+        max-width: 100%;
+    }
+}
+
+
+
+/* ====================== PROJECT LAYOUT ====================== */
+.projects-header {
+    width: 100%;
+    text-align: center;
+    padding: 200px 0;
+}
+
+.projects-header h1 {
+    font-size: 4rem;
+    color: #8d00ff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.projects-header .subtitle {
+    color: var(--bs-secondary);
+    font-size: 1.2rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.projects-content {
+    width: 100%;
+    margin: 0;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    background: rgba(0, 0, 0, 0);
+}
+
+
+.project-item {
+    width: 100%;
+    background: transparent; 
+    border-radius: 0;
+    padding: 60px 80px;
+    transition: none;
+    box-shadow: none;
+}
+
+.project-item h2 {
+    color: #8d00ff;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    color: var(--bs-body-color);
+    line-height: 1.6;
+}
+
+.project-img {
+    flex: 1;
+    text-align: center;
+}
+
+.project-img img {
+    width: 100%;
+    border-radius: 16px;
+    filter: brightness(0.8) contrast(1.2);
+    box-shadow: 0 0 20px rgba(141, 0, 255, 0.4);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.05);
+    filter: brightness(1) contrast(1.4);
+}
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 24px;
+    margin-top: 25px;
+    border-radius: 12px;
+    background: #1a0067;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(141, 0, 255, 0.5);
+}
+
+    .github-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(141, 0, 255, 0.8);
+        background: #b596ff;
+    }
+
+    .github-btn i {
+        font-size: 1.2rem;
+    }
+
 
 

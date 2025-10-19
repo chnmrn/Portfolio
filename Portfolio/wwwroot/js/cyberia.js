@@ -16,18 +16,28 @@ document.addEventListener('mousemove', e => {
 
 // ===========================================================
 // NODES
-const nodes = document.querySelectorAll('.node');                           // we select all elements with the class "node"
+const nodes = document.querySelectorAll('.node');
 
 nodes.forEach(node => {
+    // Si tiene data-img, se aplica como fondo
+    const img = node.dataset.img;
+    if (img) {
+        node.style.background = `url('${img}') no-repeat center center`;
+        node.style.backgroundSize = 'cover';
+    }
+
+    // Redirección al click
     node.addEventListener('click', () => {
-        alert('Action Click: ' + node.innerText);                           // This shows a pop-up with the text of the node when clicked (I will change it in a future)
+        const link = node.dataset.link; // lee el data-link
+        if (link) window.location.href = link; // redirige al HTML correspondiente
     });
 
+    // Animación de glow
     setInterval(() => {
-        node.style.boxShadow = `0 0 ${Math.random() * 15 + 5}px #ffffff`;   // This is for an animation to get brighter randomly
+        node.style.boxShadow = `0 0 ${Math.random() * 15 + 5}px #ffffff`;
     }, 1000);
 });
-// ===========================================================
+
 
 
 

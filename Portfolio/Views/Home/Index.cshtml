@@ -1,13 +1,23 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Juan Diego Sanchez</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="cyber-container text-center">
+    <div class="cyber-panel">
+        <div class="panel-body">
+            <h1 class="display-4">Juan Diego Sánchez</h1>
+            <p>
+                Programmer, learning and improving my skills and knowledge everyday in this website.
+                I try to do implementations and understanding of new things I see on the internet to become a better programmer.
+                <br>
+                <a href="https://github.com/chnmrn" target="_blank">Github - Chnmrn</a>
+            </p>
+        </div>
+    </div>
 
-    <div class="node" style="top: 200px; left: 300px;">Nodo 1</div>
-    <div class="node" style="top: 400px; left: 600px;">Nodo 2</div>
-
+    <!-- Nodes -->
+    <div class="node" style="top: 200px; left: 300px;" data-link='@Url.Action("AboutMe", "Home")' data-img="/assets/img/aboutme.jpg"></div>
+    <div class="node" style="top: 400px; left: 1400px;" data-link="@Url.Action("Projects", "Projects")" data-img="/assets/img/projects.jpg"></div>
+    <div class="node" style="top: 800px; left: 100px;" data-link="@Url.Action("Contact", "Home")" data-img="/assets/img/zone.jpg"></div>
 
 </div>
