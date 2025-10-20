@@ -3,17 +3,25 @@
 }
 
 <div class="cyber-container">
-    <h1>@ViewData["Title"]</h1>
+    <div class="about-header-main">
+        <h1>@ViewData["Title"]</h1>
+
+        <!-- Fondo Spline -->
+        <div class="spline-background">
+            <script type="module" src="https://unpkg.com/@@splinetool/viewer@1.10.82/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/0faj0kpQodIcsboK/scene.splinecode"></spline-viewer>
+        </div>
+    </div>
+
 
     <!-- Section 1 -->
-    <section class="about-section">
+    <section class="about-section top">
         <div class="about-text">
             <h2>About Me</h2>
             <p>
-                My name is <strong>Juan Diego Sanchez</strong>, I use the username <strong>Chnmrn</strong> online, I am a developer learning about programming everyday,
-                and I try to improve my skills doing little personal projects for now.
+                My name is <strong>Juan Diego Sanchez</strong>, I use the username <span class="highlight"> Chnmrn</span> online, I am a developer learning about programming everyday,
+                and I try to improve my skills doing personal projects with different approaches for now.
                 I try to learn about some concepts I never learn about in university trying to make my path as a developer by myself meanwhile I look for a job.
-                I have some knowledge in C#, HTML, CSS, SQL, JavaScript and Java. I am no professional but I try to become one.
                 I hope this information changes throught the time when I learn more and improve my skills in the future.
             </p>
         </div>
@@ -31,8 +39,10 @@
             <h2>What you will see</h2>
             <p>
                 This website is a personal playground where I try to implement new things and see how can I improve my skills in <span class="highlight">full-stack</span>.
-                I am used in do backend development, but I want to learn more about frontend and design. even tho I have some struggles in creating things that look good but this is also part of the process.
-                I will try to do implementation and creation of different codes to improve my UI/UX skills and my programming skills in general.
+                I am used in do backend development, but I want to learn more about frontend and design. I am also learning about game development in my free time.
+                I will try to do implementation and creation of different codes to improve my UI/UX skills and my programming skills in general in this site so it 
+                can be seen by whoever wants to check this portfolio.
+
             </p>
         </div>
 
@@ -43,16 +53,81 @@
         </div>
     </section>
 
-    <!-- Sección 3 -->
+    <!-- Section 3 -->
     <section class="about-section">
-        <div class="about-text full">
-            <h2>03 // Vision</h2>
-            <p>
-                The future of the web will blur the boundary between digital and physical.
-                My work explores that edge — through interactive nodes, glitch aesthetics,
-                and immersive designs that respond to emotion and input.
-            </p>
+        <div class="about-text">
+            <h2>Knowledge</h2>
+
+            <div class="accordion">
+                <div class="topic">
+                    <h3>SKILLS</h3>
+                
+                    <svg width="15" height="10" viewBox="0 0 42 25">
+                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <div class="answer">
+                    <p>
+                        I have some knowledge in programming languages and other skills such as:
+                        <ul>
+                            <li>C#         - Advanced</li>
+                            <li>HTML & CSS - Advanced</li>
+                            <li>PHP        - Intermediate</li>
+                            <li>JavaScript - Basic</li>
+                            <li>Java       - Basic</li>
+                            <li>SQL        - Intermediate</li>
+                            <li>Unity      - Basic</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="topic">
+                    <h3>CERTIFICATIONS</h3>
+                
+                    <svg width="15" height="10" viewBox="0 0 42 25">
+                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <div class="answer">
+                    <p>
+                        Besides my knowledge in some programmer skills and other areas, I am currently working on getting certifications to improve my knowledge and skills as a developer.
+                        I have completed the following certifications:
+                        <ul>
+                            <li>Microsoft 365 Certified: Funamentals</li>
+                            <li>Scrum Certified: Fundamentals</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="topic">
+                    <h3>LANGUAGES</h3>
+
+                    <svg width="15" height="10" viewBox="0 0 42 25">
+                        <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                    </svg>
+                </div>
+
+                <div class="answer">
+                    <p>
+                        And I also know some languages such as:
+                        <ul>
+                            <li>Spanish - Native</li>
+                            <li>English - Fluent</li>
+                            <li>Turkish - Learning</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
             <a href="/Home/Index" class="cyber-link">← Return to the Main Network</a>
+        </div>
+        <div class="cyber-panel" style="flex:1; display:flex; justify-content:center; align-items:center; min-height:50vh;">
+            <div class="about-img">
+                <img src="~/assets/img/Me.png" alt="Digital portrait" />
+            </div>
         </div>
     </section>
 </div>
