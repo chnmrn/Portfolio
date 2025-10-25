@@ -1,24 +1,43 @@
 ﻿@{
     ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/presentation.css" />
 }
 
 <div class="cyber-container text-center">
     <!-- Panel Principal -->
-    <div class="cyber-panel">
-        <div class="panel-body">
-            <h1 class="display-4">Juan Diego Sánchez</h1>
-            <p>
-                Programmer, learning and improving my skills and knowledge everyday in this website.
-                I try to do implementations and understanding of new things I see on the internet to become a better programmer.
-                <br>
-                <a href="https://github.com/chnmrn" target="_blank">Github - Chnmrn</a>
-            </p>
+    <div class="banner">
+        <div class="slider" style="--quantity: 6">
+            <div class="item" data-link="@Url.Action("AboutMe", "Home")" style="--position: 1"><img src="~/assets/sliders/Hands.jpg" alt="" /></div>
+            <div class="item" data-link="@Url.Action("Projects", "Projects")" style="--position: 2"><img src="~/assets/sliders/Commands.jpg" alt="" /></div>
+            <div class="item" style="--position: 3"><img src="~/assets/sliders/Morse.jpg" alt="" /></div>
+            <div class="item" style="--position: 4"><img src="~/assets/sliders/code.jpg" alt="" /></div>
+            <div class="item" style="--position: 5"><img src="~/assets/sliders/Copland.jpg" alt="" /></div>
+            <div class="item" style="--position: 6"><img src="~/assets/sliders/Robot.jpg" alt="" /></div>
+        </div>
+        <div class="cyber-content">
+            <div class="cyber-panel">
+                <div class="panel-body">
+                    <h1 class="display-4">Juan Diego Sánchez</h1>
+                    <p>
+                        Programmer, learning and improving my skills and knowledge everyday in this website.
+                        I try to do implementations and understanding of new things I see on the internet to become a better programmer.
+                        <br>
+                        <a href="https://github.com/chnmrn" target="_blank">Github - Chnmrn</a>
+                    </p>
+                </div>
+                <div class="mira"></div>
+            </div>
         </div>
     </div>
 
-    <!-- Nodes -->
-    <div class="node" style="top: 200px; left: 300px;" data-link='@Url.Action("AboutMe", "Home")' data-img="/assets/img/aboutme.jpg"></div>
-    <div class="node" style="top: 400px; left: 1400px;" data-link="@Url.Action("Projects", "Projects")" data-img="/assets/img/projects.jpg"></div>
     <div class="node" style="top: 800px; left: 100px;" data-link="@Url.Action("Contact", "Home")" data-img="/assets/img/zone.jpg"></div>
 
 </div>
+
+@section Scripts {
+    <script src="~/js/slider3d.js"></script>
+}

@@ -2,21 +2,27 @@
     ViewData["Title"] = "Projects";
 }
 
-<div class="projects-header">
-    <h1>@ViewData["Title"]</h1>
-    <p class="subtitle">Here are some projects I’ve worked on throughout my coding path.</p>
-</div>
+<div class="cyber-container">
+    <div class="about-header-main">
+        <h1>@ViewData["Title"]</h1>
+        <p class="subtitle">Here are some projects I’ve worked on throughout my coding path.</p>
 
-<div class="projects-content">
-    <section class="about-section">
+        <!-- Fondo Spline -->
+        <div class="spline-background">
+            <script type="module" src="https://unpkg.com/@@splinetool/viewer@1.10.82/build/spline-viewer.js"></script>
+            <spline-viewer url="https://prod.spline.design/0faj0kpQodIcsboK/scene.splinecode"></spline-viewer>
+        </div>
+    </div>
+
+    <section class="about-section top">
         <div class="about-text">
             <h2>Full-Stack Web System for the school "La Granja"</h2>
             <p>
                 Me and my teammates created a full working system for a school, we build up the interface and backend functions of the staff of the school sites and the parents sites,
                 there is inclusion of security configurations, for the access of the users and management on the relation and configuration of diferent tables in the database.
-                This was made with <strong>C# as an MVC ASP including languages such as HTML, CSS, JavaScript, with inclusion of SQL</strong>, and there are many differences between the basic CRUD system, 
-                like the management of roles and permissions, different types of users with different access levels, creation of reports. This is my first big project working in a team and 
-                using all my effort because it was made for a real school, so it was more than just an university project.
+                This was made with <span class="highlight">C# as an MVC ASP including languages such as HTML, CSS, JavaScript, with inclusion of SQL</span>, 
+                and there are many differences between the basic CRUD system, like the management of roles and permissions, different types of users with different access levels, 
+                creation of reports. This is my first big project working in a team and using all my effort because it was made for a real school, so it was more than just an university project.
             </p>
         </div>
         <div class="cyber-panel" style="flex:1; display:flex; justify-content:center; align-items:center; min-height:50vh;">
@@ -34,7 +40,7 @@
         <div class="about-text">
             <h2>Slime Dum</h2>
             <p>
-                A videogame made as an university project, it was made in <strong>Unity and C#</strong>, the game is a 2D platform and it is about a slime who goes through levels to finish it.
+                A videogame made as an university project, it was made in <span class="highlight">Unity and C#</span>, the game is a 2D platform and it is about a slime who goes through levels to finish it.
                 It has some bugs and errors that need to be changed but it was my first experience creating a videogame and learning the basics of game development, but I plan to modify those changes in a future.
                 You will see very basic things about videogames, scenes, characters, enemies, boss fight, menu.
             </p>
@@ -54,7 +60,7 @@
         <div class="about-text">
             <h2>Web System Client/Server for the salon "Evolve"</h2>
             <p>
-                This is a project for the university, made with <strong>PHP and MySQL</strong>, we leanred about client/server systems, me and my teammates created a full working system for a salon,
+                This is a project for the university, made with <span class="highlight">PHP and MySQL</span>, we leanred about client/server systems, me and my teammates created a full working system for a salon,
                 we build up the interface and backend functions of the client/server sites, including functions of access and authentication, management of databases such as CRUD functions,
                 and relations between tables. It helped me to learn how it works and how to create websites using PHP
             </p>

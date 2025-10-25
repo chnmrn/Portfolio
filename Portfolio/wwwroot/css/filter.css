@@ -3,7 +3,7 @@
     --bs-body-bg: #101029;
     --bs-body-color: #c0e0ff;
     --bs-primary: #33aaff;
-    --bs-secondary: #6622cc;
+    --bs-secondary: #6E89B6;
     --bs-info: #00ffff;
     --bs-border-color: #1a1d40;
     --bs-light: #1b1b2f;
@@ -85,15 +85,16 @@ body, footer {
 }
 
 .nav-link {
-    color: #7c00ff !important; 
+    color: #607DAF !important;
     font-family: "Goldman", sans-serif;
     font-weight: 700;
     font-style: normal;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    text-shadow: 0 0 10px #6E89B6;
 }
 
 .nav-link:hover {
-    color: #a266ff !important;
+    color: #040E47 !important;
 
 }
 
@@ -111,11 +112,10 @@ body, footer {
 
 
 h1 {
-    color: #8d00ff;
+    color: #071868;
     font-family: "Rubik Glitch", system-ui;
     font-style: normal;
-    text-shadow: 0 0 3px #8d00ff, 0 0 3px #8d00ff;
-    font-size: 5rem;
+    text-shadow: 0 0 20px #6E89B6;
     margin-top: 50px;
 }
 
@@ -217,8 +217,8 @@ h1 {
 }
 
 .cyber-panel h1 {
-    color: #8d00ff;
-    text-shadow: 0 0 10px #8d00ff;
+    color: #071868;
+    text-shadow: 0 0 10px #6E89B6;
     margin-bottom: 20px;
 }
 
@@ -229,22 +229,22 @@ h1 {
 }
 
 .cyber-panel a {
-    color: #755bb3;
+    color: #1f4681;
     text-decoration: none;
     font-weight: bold;
 }
 
 .cyber-panel a:hover {
-    text-shadow: 0 0 8px #755bb3;
+    text-shadow: 0 0 10px #607DAF;
 }
 
 @keyframes pulse-glow {
     0% {
-        box-shadow: 0 0 15px #755bb3;
+        box-shadow: 0 0 15px #607DAF;
     }
 
     100% {
-        box-shadow: 0 0 25px #755bb3;
+        box-shadow: 0 0 25px #607DAF;
     }
 }
 
@@ -252,7 +252,7 @@ h1 {
     text-align: left;
     font-family: "Share Tech Mono", monospace;
     font-size: 0.9rem;
-    color: #8d00ff;
+    color: #c0e0ff;
     border-bottom: 1px solid #8d00ff;
     padding-bottom: 5px;
     margin-bottom: 15px;
@@ -286,12 +286,12 @@ h1 {
     line-height: 1.6;
 }
 
-.about-text h2 {
-    color: #8d00ff;
-    text-shadow: 0 0 8px #8d00ff;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-}
+    .about-text h2 {
+        color: #607DAF;
+        text-shadow: 0 0 15px #6E89B6;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
 
 .about-text.full {
     text-align: center;
@@ -309,7 +309,7 @@ h1 {
     max-width: 400px;
     border-radius: 16px;
     filter: brightness(0.8) contrast(1.2);
-    box-shadow: 0 0 20px rgba(141, 0, 255, 0.4);
+    box-shadow: 0 0 20px #607DAF;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
@@ -320,8 +320,8 @@ h1 {
 
 
 .highlight {
-    color: #8d00ff;
-    text-shadow: 0 0 6px #8d00ff;
+    color: #6E89B6;
+    text-shadow: 0 0 6px #607DAF;
     font-weight: bold;
 }
 
@@ -330,18 +330,18 @@ h1 {
     display: inline-block;
     margin-top: 40px;
     padding: 10px 25px;
-    border: 1px solid #8d00ff;
+    border: 1px solid #607DAF;
     border-radius: 6px;
-    color: #8d00ff;
+    color: #607DAF;
     text-decoration: none;
     font-family: 'Share Tech Mono', monospace;
     transition: all 0.3s ease;
 }
 
-.cyber-link:hover {
-    background-color: rgba(141, 0, 255, 0.15);
-    box-shadow: 0 0 15px #8d00ff;
-}
+    .cyber-link:hover {
+        background-color: rgba(64, 98, 152, 0.15);
+        box-shadow: 0 0 15px #6E89B6;
+    }
 
 
 @media (max-width: 768px) {
@@ -358,55 +358,14 @@ h1 {
 
 
 /* ====================== PROJECT LAYOUT ====================== */
-.projects-header {
-    width: 100%;
+.about-header-main .subtitle {
+    position: relative;
+    z-index: 1; 
+    color: #c0e0ff;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5rem;
+    margin-top: 15px; 
     text-align: center;
-    padding: 200px 0;
-}
-
-.projects-header h1 {
-    font-size: 4rem;
-    color: #8d00ff;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
-.projects-header .subtitle {
-    color: var(--bs-secondary);
-    font-size: 1.2rem;
-    opacity: 0.8;
-    letter-spacing: 1px;
-}
-
-.projects-content {
-    width: 100%;
-    margin: 0;
-    padding: 80px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    background: rgba(0, 0, 0, 0);
-}
-
-
-.project-item {
-    width: 100%;
-    background: transparent; 
-    border-radius: 0;
-    padding: 60px 80px;
-    transition: none;
-    box-shadow: none;
-}
-
-.project-item h2 {
-    color: #8d00ff;
-    margin-bottom: 10px;
-}
-
-.project-item p {
-    color: var(--bs-body-color);
-    line-height: 1.6;
 }
 
 .project-img {
@@ -418,7 +377,7 @@ h1 {
     width: 100%;
     border-radius: 16px;
     filter: brightness(0.8) contrast(1.2);
-    box-shadow: 0 0 20px rgba(141, 0, 255, 0.4);
+    box-shadow: 0 0 20px #607DAF;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
 
@@ -435,25 +394,25 @@ h1 {
     padding: 12px 24px;
     margin-top: 25px;
     border-radius: 12px;
-    background: #1a0067;
+    background: #010533;
     color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 0 12px rgba(141, 0, 255, 0.5);
+    box-shadow: 0 0 10px #607DAF;
 }
 
-    .github-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(141, 0, 255, 0.8);
-        background: #b596ff;
-    }
+.github-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(31, 70, 129, 0.3);
+    background: #7B94BD;
+}
 
-    .github-btn i {
-        font-size: 1.2rem;
-    }
+.github-btn i {
+    font-size: 1.2rem;
+}
 
 
 
@@ -462,12 +421,14 @@ h1 {
 .about-header-main {
     position: relative;
     width: 100%;
-    height: 400px; 
+    height: 400px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
+
 
 .spline-background {
     position: absolute;
@@ -488,10 +449,10 @@ h1 {
 .about-header-main h1 {
     position: relative;
     z-index: 1;
-    color: #8d00ff;
+    color: #071868;
     font-family: "Rubik Glitch", system-ui;
     font-size: 5rem;
-    text-shadow: 0 0 15px #8d00ff;
+    text-shadow: 0 0 15px #6E89B6;
     text-align: center;
 }
 
@@ -518,7 +479,7 @@ h1 {
 
 .accordion {
     width: 100%;
-    border-bottom: 2px solid #7c00ff;
+    border-bottom: 2px solid #071868;
 }
 
 .topic {
@@ -528,8 +489,8 @@ h1 {
 }
 
 .topic h3 {
-    color: #8d00ff;
-    text-shadow: 0 0 8px #8d00ff;
+    color: #607DAF;
+    text-shadow: 0 0 8px #6E89B6;
     font-size: 1.4rem;
     margin-top: 10px;
 
@@ -569,4 +530,13 @@ svg {
         opacity: 1;
         transform: translateY(0px)
     }
+}
+
+/* ====================== NAVBAR ====================== */
+
+.app-header.navbar.bg-body {
+    background: rgba(16, 16, 41, 0.15) !important; 
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(96, 125, 175, 0.4);
+    box-shadow: 0 0 20px rgba(108, 0, 255, 0.15);
 }
