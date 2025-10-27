@@ -22,8 +22,8 @@
 }
 
 
-body, footer {
-    color: #7c00ff;
+body {
+    color: rgb(96, 125, 175);
     font-family: 'Share Tech Mono', monospace;
     height: 100%;
     background: linear-gradient(180deg, rgb(0, 3, 20) 0%, rgb(13, 23, 59) 60%, rgb(0, 3, 20) 100%);
@@ -414,7 +414,11 @@ h1 {
     font-size: 1.2rem;
 }
 
-
+.github-footer, .linkedin-footer, .gmail-footer {
+    color: #607DAF;
+    text-shadow: 0 0 10px #6E89B6;
+    text-decoration: none;
+}
 
 
 /* ====================== SPLINE IMPLEMENTATION  ====================== */
@@ -537,6 +541,120 @@ svg {
 .app-header.navbar.bg-body {
     background: rgba(16, 16, 41, 0.15) !important; 
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(96, 125, 175, 0.4);
     box-shadow: 0 0 20px rgba(108, 0, 255, 0.15);
 }
+
+/* ====================== FOOTER ====================== */
+.app-footer {
+    font-family: 'Share Tech Mono', monospace;
+    background: linear-gradient(180deg, #000 0%, #0a0a1a 100%);
+    width: 100%;
+    padding: 60px 80px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    border-top: 2px solid #1a1d40;
+}
+
+    .app-footer .about-header-footer {
+        flex: 1 1 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 10px;
+    }
+
+        .app-footer .about-header-footer h2 {
+            font-family: "Goldman", sans-serif;
+            font-size: 4rem;
+            color: #6E89B6;
+            text-shadow: 0 0 12px #6E89B6, 0 0 25px #33aaff;
+            margin: 0;
+        }
+
+        .app-footer .about-header-footer .subtitle {
+            font-size: 1.1rem;
+            color: #c0e0ff;
+            line-height: 1.5;
+            max-width: 450px;
+        }
+
+    .app-footer .about-section-links {
+        flex: 1 1 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .app-footer .about-links-footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        font-size: 1.9rem;
+    }
+
+        .app-footer .about-links-footer h2 {
+            font-family: "Goldman", sans-serif;
+            font-size: 2.5rem;
+            color: #6E89B6;
+            text-shadow: 0 0 12px #6E89B6, 0 0 25px #33aaff;
+            margin: 0;
+        }
+
+        .app-footer .about-links-footer a {
+            color: #6E89B6;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+            .app-footer .about-links-footer a:hover {
+                color: #33aaff;
+                text-shadow: 0 0 8px #33aaff;
+            }
+
+    .app-footer .about-copyright-footer {
+        font-size: 0.9rem;
+        color: #aaa;
+    }
+
+        .app-footer .about-copyright-footer a {
+            color: #33aaff;
+            text-decoration: none;
+        }
+
+            .app-footer .about-copyright-footer a:hover {
+                text-decoration: underline;
+            }
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #33aaff80, transparent);
+    box-shadow: 0 0 6px #33aaff60;
+}
+
+/* This is for making the footer responsive for PC and mobiles */
+@media (max-width: 900px) {
+    .app-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+        .app-footer .about-header-footer,
+        .app-footer .about-section-links {
+            align-items: center;
+            text-align: center;
+        }
+
+            .app-footer .about-header-footer h2 {
+                font-size: 3rem;
+            }
+}
+

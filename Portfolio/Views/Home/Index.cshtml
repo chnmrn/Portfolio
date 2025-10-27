@@ -13,8 +13,8 @@
         <div class="slider" style="--quantity: 6">
             <div class="item" data-link="@Url.Action("AboutMe", "Home")" style="--position: 1"><img src="~/assets/sliders/Hands.jpg" alt="" /></div>
             <div class="item" data-link="@Url.Action("Projects", "Projects")" style="--position: 2"><img src="~/assets/sliders/Commands.jpg" alt="" /></div>
-            <div class="item" style="--position: 3"><img src="~/assets/sliders/Morse.jpg" alt="" /></div>
-            <div class="item" style="--position: 4"><img src="~/assets/sliders/code.jpg" alt="" /></div>
+            <div class="item" data-link="@Url.Action("Resources", "Resources")" style="--position: 3"><img src="~/assets/sliders/Morse.jpg" alt="" /></div>
+            <div class="item" data-link="@Url.Action("Playground", "Playground")" style="--position: 4"><img src="~/assets/sliders/code.jpg" alt="" /></div>
             <div class="item" style="--position: 5"><img src="~/assets/sliders/Copland.jpg" alt="" /></div>
             <div class="item" style="--position: 6"><img src="~/assets/sliders/Robot.jpg" alt="" /></div>
         </div>
@@ -33,9 +33,6 @@
             </div>
         </div>
     </div>
-
-    <div class="node" style="top: 800px; left: 100px;" data-link="@Url.Action("Contact", "Home")" data-img="/assets/img/zone.jpg"></div>
-
 </div>
 
 @section Scripts {
