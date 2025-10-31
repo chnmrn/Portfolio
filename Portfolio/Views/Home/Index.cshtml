@@ -8,31 +8,68 @@
 }
 
 <div class="cyber-container text-center">
-    <!-- Panel Principal -->
-    <div class="banner">
-        <div class="slider" style="--quantity: 6">
-            <div class="item" data-link="@Url.Action("AboutMe", "Home")" style="--position: 1"><img src="~/assets/sliders/Hands.jpg" alt="" /></div>
-            <div class="item" data-link="@Url.Action("Projects", "Projects")" style="--position: 2"><img src="~/assets/sliders/Commands.jpg" alt="" /></div>
-            <div class="item" data-link="@Url.Action("Resources", "Resources")" style="--position: 3"><img src="~/assets/sliders/Morse.jpg" alt="" /></div>
-            <div class="item" data-link="@Url.Action("Playground", "Playground")" style="--position: 4"><img src="~/assets/sliders/code.jpg" alt="" /></div>
-            <div class="item" style="--position: 5"><img src="~/assets/sliders/Copland.jpg" alt="" /></div>
-            <div class="item" style="--position: 6"><img src="~/assets/sliders/Robot.jpg" alt="" /></div>
-        </div>
-        <div class="cyber-content">
-            <div class="cyber-panel">
-                <div class="panel-body">
-                    <h1 class="display-4">Juan Diego Sánchez</h1>
-                    <p>
-                        Programmer, learning and improving my skills and knowledge everyday in this website.
-                        I try to do implementations and understanding of new things I see on the internet to become a better programmer.
-                        <br>
-                        <a href="https://github.com/chnmrn" target="_blank">Github - Chnmrn</a>
-                    </p>
+    <!-- Presentation -->
+    <section class="welcome-section">
+        <div class="welcome-container">
+            <div class="welcome-image">
+                <img src="/assets/img/Me.png" alt="Foto de Juan D.">
+            </div>
+
+            <div class="welcome-info">
+                <h1 class="welcome-name">Juan Diego Sánchez</h1>
+                <p class="welcome-text">
+                    Programmer, learning and improving my skills everyday, I love to create and develop and most important learn continuously and give my best.
+                    I am currently doing freelancing while looking for a full-time job as a developer. I am open to new opportunities and challenges.
+                    I plan to update this portfolio with new features I learn and implement in the future.
+                    <br>
+                </p>
+                <div class="welcome-links">
+                    <a href="https://github.com/chnmrn" target="_blank" class="welcome-btn">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/juan-diego-sanchez-gamboa" target="_blank" class="welcome-btn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+
+                    <a href="mailto:jdsang18@gmail.com" target="_blank" class="welcome-btn">
+                        <i class="fas fa-envelope"></i> Gmail
+                    </a>
+
+                    <a href="~/assets/docs/CV_JuanD.pdf" target="_blank" download class="welcome-btn">
+                        <i class="fas fa-file-alt"></i> Check my CV
+                    </a>
                 </div>
-                <div class="mira"></div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Panel -->
+    <section class="banner-section">
+        <div class="banner">
+            <div class="banner-header">
+                <h2 class="banner-title">Explore My Work</h2>
+                <p class="banner-description">
+                    You can travel through some sections of my portfolio with this images, click on them to explore!
+                </p>
+            </div>
+
+            <div class="slider" style="--quantity: 6">
+                <div class="item" data-link="@Url.Action("AboutMe", "Home")" style="--position: 1"><img src="~/assets/sliders/Hands.jpg" alt="About Me" /></div>
+                <div class="item" data-link="@Url.Action("Projects", "Projects")" style="--position: 2"><img src="~/assets/sliders/Commands.jpg" alt="Projects" /></div>
+                <div class="item" data-link="@Url.Action("Resources", "Resources")" style="--position: 3"><img src="~/assets/sliders/Morse.jpg" alt="Resources" /></div>
+                <div class="item" data-link="@Url.Action("Playground", "Playground")" style="--position: 4"><img src="~/assets/sliders/code.jpg" alt="Playground" /></div>
+                <div class="item" style="--position: 5"><img src="~/assets/sliders/Copland.jpg" alt="Copland" /></div>
+                <div class="item" style="--position: 6"><img src="~/assets/sliders/Robot.jpg" alt="Robot" /></div>
+            </div>
+
+            <div class="spline-banner">
+                <script type="module" src="https://unpkg.com/@@splinetool/viewer@1.10.82/build/spline-viewer.js"></script>
+                <spline-viewer url="https://prod.spline.design/0faj0kpQodIcsboK/scene.splinecode"></spline-viewer>
+            </div>
+        </div>
+    </section>
+
 </div>
 
 @section Scripts {
