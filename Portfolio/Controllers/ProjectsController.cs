@@ -11,6 +11,11 @@ namespace Portfolio.Controllers
             return View();
         }
 
+        public ActionResult Timeline()
+        {
+            return View();
+        }
+
         // GET: ProjectsController/Details/5
         public ActionResult Details(int id)
         {

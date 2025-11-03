@@ -866,7 +866,7 @@ svg {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-family: "Goldman", sans-serif;
     font-weight: 700;
-    color: #607DAF !important;
+    color: #9aa9ed;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
     text-shadow: 0 0 10px #6E89B6;
 }
@@ -883,11 +883,90 @@ svg {
 
 .spline-banner {
     position: absolute;
-    top: -8%;
+    top: -12%;
     left: -20%;
     width: 140%;
     height: 140%;
-    transform: scale(1.0);
+    transform: scale(0.8);
     z-index: 0;
     pointer-events: none;
+}
+
+/* ====================== TIMELINE BASE ====================== */
+
+.timeline {
+    position: relative;
+    margin: 5rem auto;
+    padding: 2rem 0;
+}
+
+    .timeline::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 100%;
+        background: #2f347a;
+        transform: translateX(-50%);
+        box-shadow: 0 0 15px #607DAF;
+    }
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+}
+
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 50%;
+        text-align: left;
+    }
+
+.timeline-content {
+    background: rgba(15, 20, 40, 0.7);
+    border: 1px solid #2f347a;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+    .timeline-content:hover {
+        background: rgba(15, 20, 40, 0.1);
+        box-shadow: 0 0 15px #607DAF;
+        transform: translateY(-5px);
+    }
+
+    .timeline-content h3 {
+        font-family: "Goldman", sans-serif;
+        color: #607DAF !important;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-content p {
+        color: #ddd;
+        font-size: 1rem;
+    }
+
+.timeline-item::before {
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: #3e449c;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #607DAF;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -10px;
+    right: auto;
 }
