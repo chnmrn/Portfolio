@@ -1,49 +1,17 @@
-﻿// DEVELOPER COMMENT:
-// HONESTLY I DON'T KNOW MUCH ABOUT JAVASCRIPT, I HAD TO ASK AN AI TO HELP ME CREATE THIS BUT I WILL EXPLAIN HOW EACH OF THEM WORKS
-
-
-
-// ===========================================================
+﻿// ===========================================================
 // CURSOR
-const cursor = document.getElementById('cursor');   // we select the element "cursor"
+const cursor = document.getElementById('cursor');   
 document.addEventListener('mousemove', e => {
     cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';            // this two are for the movement of the mouse, it will whenever the mouse is
+    cursor.style.top = e.clientY + 'px';            
 });
 // ===========================================================
-
-
-
-// ===========================================================
-// NODES
-const nodes = document.querySelectorAll('.node');
-
-nodes.forEach(node => {
-    // Si tiene data-img, se aplica como fondo
-    const img = node.dataset.img;
-    if (img) {
-        node.style.background = `url('${img}') no-repeat center center`;
-        node.style.backgroundSize = 'cover';
-    }
-
-    // Redirección al click
-    node.addEventListener('click', () => {
-        const link = node.dataset.link; // lee el data-link
-        if (link) window.location.href = link; // redirige al HTML correspondiente
-    });
-
-    // Animación de glow
-    setInterval(() => {
-        node.style.boxShadow = `0 0 ${Math.random() * 15 + 5}px #ffffff`;
-    }, 1000);
-});
-
 
 
 
 // ===========================================================
 // PARTICLES
-const canvas = document.getElementById("bg");   // we select the canvas element "bg"
+const canvas = document.getElementById("bg");   
 const ctx = canvas.getContext("2d");            // we get the 2D context of the canvas
 canvas.width = window.innerWidth;               // we set the width of the canvas to the width of the window
 canvas.height = window.innerHeight;             // we set the height of the canvas to the height of the window
@@ -71,16 +39,4 @@ function animateParticles() {                           // we create the method 
     requestAnimationFrame(animateParticles);            // we call the method again to create a loop
 }
 animateParticles();
-//===========================================================
-
-//===========================================================
-// MODAL
-function showModal(content) {
-    let modal = document.createElement('div');                  // we create a new div element
-    modal.classList.add('modal');                               // we add the class "modal" to the div
-    modal.innerHTML = content;                                  // we set the inner HTML of the div to the content passed to the function
-    document.body.appendChild(modal);                           // we add the div to the body of the document
-    setTimeout(() => modal.classList.add('active'), 50);        // we add the class "active" to the div after 50 milliseconds to trigger the CSS transition
-    modal.addEventListener('click', () => modal.remove());      // we add an event listener to the div to remove it when clicked
-}
 //===========================================================

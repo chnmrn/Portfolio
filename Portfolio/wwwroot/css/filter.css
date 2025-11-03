@@ -119,78 +119,32 @@ h1 {
     margin-top: 50px;
 }
 
-/* ====================== THIS IS THE STYLE FOR THE INTERACTIVE NODES ====================== */
-
-.node {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 0 5px #ffffff;
-    transition: 0.3s;
-    background-color: #2f347a; 
-}
-
-.node:hover {
-    box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff;
-    transform: scale(1.2);
-}
+/* ====================== CURSOR ====================== */
 
 #cursor {
-    position: fixed;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
+    z-index: 999;
     background: #2f347a;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #607DAF, 0 0 60px #607DAF, 0 0 100px #607DAF;
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: transform 0.05s;
 }
 
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    background: rgba(0, 0, 0, 0.9);
-    border: 1px solid #0ff;
-    color: #0ff;
-    padding: 20px;
-    border-radius: 8px;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    z-index: 1000;
-    max-width: 80%;
-    text-align: center;
-}
-
-.modal.active {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.modal::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border: 1px solid #0ff;
-    pointer-events: none;
-    animation: flicker 1s infinite;
-}
-
-@keyframes flicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
+    #cursor::before {
+        content: '';
+        position: absolute;
+        background: #2f347a;
+        opacity: 0.2;
+        width: 50PX;
+        height: 50PX;
+        border: 2px solid #607DAF;
+        border-radius: 50%;
+        transform: translate(-30%, -30%);
     }
-
-    20%, 22%, 24%, 55% {
-        opacity: 0.3;
-    }
-}
 
 
 /* ====================== THIS IS THE STYLE FOR THE INDEX ====================== */
